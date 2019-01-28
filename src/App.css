@@ -30,3 +30,9 @@
     transform: rotate(360deg);
   }
 }
+
+.sidebarlink {
+  text-decoration: none!important;
+  font-size: 1.15rem;
+  font-family: 'Helvetica Neue', sans-serif;
+}

@@ -1,26 +1,16 @@
-import React, { Component } from 'react'
-import Homepage from './components/homepage.js'
-import './App.css'
-import axios from 'axios'
+import React from 'react'
 
-class App extends Component {
-  state = {
-    users: [],
-    isLoading: true
-  }
-
+const userImages = () => {
+  const { users } = props.state
   componentDidMount() {
     // performing a GET request to '/api-end-point'
     axios.get('https://insta.nextacademy.com/api/v1/users')
     .then(result => {
       console.log('request successful')
-      // console.log(result.data[0].profileImage)
       this.setState({
-        users: result.data
+        users: result.data,
       })
-      let usersimg = this.state.users.map((user, i) => {
-        console.log(result.data[i].profileImage)
-      })
+      console.log(result.data)
       setTimeout(() => {
         this.setState({
           isLoading: false
@@ -33,12 +23,6 @@ class App extends Component {
       alert('There was an unexpected error. Please try again.')
     })
   }
-
-  render() {
-    return(
-      <Homepage state={this.state}/>
-    )
-  }
 }
 
-export default App;
+export default userImages
