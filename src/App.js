@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import Homepage from './components/homepage.js'
+import Homepage from './components/homepage'
+import UserProfilePage from './pages/UserProfilePage'
+import { Route } from 'react-router-dom'
 import './App.css'
 import axios from 'axios'
 
@@ -36,7 +38,10 @@ class App extends Component {
 
   render() {
     return(
-      <Homepage state={this.state}/>
+      <div>
+        <Route exact path="/" component={props => <Homepage users={this.state.users} isLoading={this.state.isLoading} {...props} />} />
+        <Route path="/users/:id" component={props => <UserProfilePage users={this.state.users} isLoading={this.state.isLoading} {...props} />} />
+      </div>
     )
   }
 }

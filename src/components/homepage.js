@@ -7,10 +7,12 @@ import Loading from './loading.js'
 import UserImages from './UserImages'
 
 const homepage = (props) => {
-  const { users } = props.state
-  let mainContent = props.state.isLoading
-    ? <Loading />
-    : <MainContainer contents={<Posts users={ users } />} />
+  const { users } = props
+  let mainContent = props.isLoading
+    ? <Loading size={250}/>
+    : <MainContainer>
+        <Posts users={ users } />
+      </MainContainer>
   return (
     <div className="App">
       <Row>

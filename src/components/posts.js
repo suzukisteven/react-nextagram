@@ -5,7 +5,7 @@ import image from '../images/image.png'
 import UserImages from './UserImages.js'
 
 const posts = (props) => {
-  let users = props.users
+  let { users } = props
   let userCards = users.map(user => {
     return (
       <Col md='4'>

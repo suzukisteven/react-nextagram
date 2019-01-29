@@ -32,12 +32,24 @@ class UserImages extends Component {
     })
   }
 
+  // let placeholder = () => {
+  //   if (images[0] === '') {
+  //     <Image
+  //       src={ placeholder }
+  //       width="250"
+  //       height="250"
+  //       alt="placeholder loadings"
+  //     /><br/>
+  //   } else {
+  //     <img className="mb-3" src={images[0]} style={{width:'250px'}} alt="user profile image"/><br/>
+  //   }
+  // }
+
   render() {
     let {images} = this.state;
     let imageContainer = this.state.isLoading
-
     ? <div>
-      <Image
+        <Image
           src={ placeholder }
           width="250"
           height="250"

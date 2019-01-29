@@ -1,10 +1,10 @@
 import React from 'react'
 import loadingSpinner from '../images/loading.gif'
 
-const loading = () => {
+const loading = (props) => {
   return(
-    <div className="w-100">
-      <img src={ loadingSpinner } alt="loading spinner"/>
+    <div>
+      <img src={ loadingSpinner } alt="loading spinner" style={ { width: `${props.size}px`} }/>
     </div>
   )
 }
