@@ -4,6 +4,7 @@ import MainContainer from './maincontainer.js'
 import Sidebar from './sidebar.js'
 import Posts from './posts.js'
 import Loading from './loading.js'
+import UserImages from './UserImages'
 
 const homepage = (props) => {
   const { users } = props.state

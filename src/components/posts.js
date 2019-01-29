@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardImg, CardDeck, CardText, CardBody,
 CardTitle, CardSubtitle, Button, Row, Col, CardHeader } from 'reactstrap';
 import image from '../images/image.png'
+import UserImages from './UserImages.js'
 
 const posts = (props) => {
   let users = props.users
@@ -14,7 +15,7 @@ const posts = (props) => {
             <CardTitle>User ID: {user.id}</CardTitle>
             <CardSubtitle>Sub-Title</CardSubtitle>
             <CardText>Card Text</CardText>
-            <img className="mb-3" src={user.profileImage} style={{width:'250px'}} alt="user profile image"/><br/>
+            <UserImages userId={user.id}/>
             <Button outline color="primary">Follow</Button>
           </CardBody>
         </Card>
